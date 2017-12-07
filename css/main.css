@@ -1,3 +1,29 @@
-* {
-  font-family: 'Catamaran', sans-serif;
+body {
+  font-family: 'Catamaran', sans-serif; }
+
+.navbar {
+  padding: 5px;
   font-family: 'Lato', sans-serif; }
+
+.navbar-header {
+  display: flex; }
+  .navbar-header__logo img {
+    max-height: 40px; }
+  .navbar-header__menu {
+    display: inline-block;
+    cursor: pointer;
+    margin-left: auto; }
+    .navbar-header__menu_change .navbar-header__bar1 {
+      -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+      transform: rotate(-45deg) translate(-9px, 6px); }
+    .navbar-header__menu_change .navbar-header__bar2 {
+      opacity: 0; }
+    .navbar-header__menu_change .navbar-header__bar3 {
+      -webkit-transform: rotate(45deg) translate(-8px, -8px);
+      transform: rotate(45deg) translate(-8px, -8px); }
+  .navbar-header__bar1, .navbar-header__bar2, .navbar-header__bar3 {
+    width: 35px;
+    height: 2px;
+    background-color: #333;
+    margin: 9px 0;
+    transition: 0.4s; }

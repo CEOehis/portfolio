@@ -1,4 +1,43 @@
-* {
+body {
 	font-family: 'Catamaran', sans-serif;
-font-family: 'Lato', sans-serif;
+}
+
+.navbar {
+	padding: 5px;
+	font-family: 'Lato', sans-serif;
+}
+
+.navbar-header {
+	display: flex;
+
+	&__logo {
+		img {
+			max-height: 40px;
+		}
+	}
+
+	&__menu {
+    display: inline-block;
+    cursor: pointer;
+    margin-left: auto;
+    &_change {
+    	.navbar-header__bar1 {
+		    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+		    transform: rotate(-45deg) translate(-9px, 6px);
+			}
+			.navbar-header__bar2 {opacity: 0;}
+			.navbar-header__bar3 {
+				-webkit-transform: rotate(45deg) translate(-8px, -8px);
+				transform: rotate(45deg) translate(-8px, -8px);
+			}
+    }
+	}
+
+	&__bar1,&__bar2,&__bar3 {
+    width: 35px;
+    height: 2px;
+    background-color: #333;
+    margin: 9px 0;
+    transition: 0.4s;
+	}
 }

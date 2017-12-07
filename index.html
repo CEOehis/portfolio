@@ -1,16 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
-    <title>Portfolio</title>
-    <link rel="stylesheet" type="text/css" href="./css/main.css">
-    <link rel="stylesheet" type="text/css" href="./css/font.css">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+  <title>Portfolio</title>
+  <link rel="stylesheet" type="text/css" href="./css/fix.css">
+  <link rel="stylesheet" type="text/css" href="./css/main.css">
+  <link rel="stylesheet" type="text/css" href="./css/font.css">
 </head>
 
 <body>
-
-  <script type="text/javascript" src=""></script>
+  <nav class="navbar">
+  	<div class="navbar-header">
+	    <a href="#" class="navbar-header__logo"><img src="./assets/logo.png" alt="logo">Celestine Ekoh-Ordan</a>
+	    <div class="navbar-header__menu" onclick="toggle(this)">
+	      <div class="navbar-header__bar1"></div>
+	      <div class="navbar-header__bar2"></div>
+	      <div class="navbar-header__bar3"></div>
+	    </div>
+	  </div>
+	  <div class="navbar-collapse">
+	    <ul>
+	    	<li><a href="#">Home</a></li>
+	    	<li><a href="#">About</a></li>
+	    	<li><a href="#">Projects</a></li>
+	    	<li><a href="#">Contact</a></li>
+	    </ul>
+	  </div>
+  </nav>
+  <script type="text/javascript">
+  	// animated menu icon
+  	function toggle(x) {
+		  x.classList.toggle("navbar-header__menu_change");
+		}
+  </script>
 </body>
 </html>
