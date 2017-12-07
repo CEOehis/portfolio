@@ -1,12 +1,20 @@
+* {
+  box-sizing: border-box; }
+
+html, body {
+  height: 100%; }
+
 body {
-  font-family: 'Catamaran', sans-serif; }
+  font-family: 'Catamaran', sans-serif;
+  font-size: 16px; }
 
 .navbar {
   padding: 5px;
   font-family: 'Lato', sans-serif; }
 
 .navbar-header {
-  display: flex; }
+  display: flex;
+  padding-bottom: 5px; }
   .navbar-header__logo img {
     max-height: 40px; }
   .navbar-header__menu {
@@ -27,3 +35,38 @@ body {
     background-color: #333;
     margin: 9px 0;
     transition: 0.4s; }
+
+.navbar-collapse {
+  border-top: 1px solid grey;
+  margin-left: -5px;
+  margin-right: -5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: none; }
+  .navbar-collapse a {
+    display: block;
+    line-height: 20px;
+    padding: 10px 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px; }
+  .navbar-collapse_expanded {
+    display: block; }
+
+.main {
+  background: #0E94D3;
+  color: white;
+  height: 80%;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  padding-left: 15px;
+  padding-right: 15px; }
+  .main h1 {
+    padding-top: 30%;
+    padding-bottom: 10%;
+    font-weight: normal; }
+  .main button {
+    margin-top: 30%;
+    background: #FF8B05;
+    padding: 10px 25px;
+    color: white; }

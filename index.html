@@ -21,7 +21,7 @@
 	    </div>
 	  </div>
 	  <div class="navbar-collapse">
-	    <ul>
+	    <ul class="navbar-items">
 	    	<li><a href="#">Home</a></li>
 	    	<li><a href="#">About</a></li>
 	    	<li><a href="#">Projects</a></li>
@@ -29,10 +29,17 @@
 	    </ul>
 	  </div>
   </nav>
+  <main class="main">
+  	<h1>Hi, I am Celestine</h1>
+  	<p>I am a Designer and front end web developer living in Lagos, Nigeria.</p>
+  	<button>CTA BUTTON</button>
+  </main>
   <script type="text/javascript">
   	// animated menu icon
   	function toggle(x) {
-		  x.classList.toggle("navbar-header__menu_change");
+		  x.classList.toggle('navbar-header__menu_change');
+		  var navbarCollapse = document.querySelector('.navbar-collapse');
+		  navbarCollapse.classList.toggle('navbar-collapse_expanded');
 		}
   </script>
 </body>
