@@ -81,6 +81,8 @@
 		  x.classList.toggle('navbar-header__menu_change');
 		  var navbarCollapse = document.querySelector('.navbar-collapse');
 		  navbarCollapse.classList.toggle('navbar-collapse_expanded');
+		  var navlist = navbarCollapse.querySelectorAll('li');
+		  navlist.forEach(li => li.classList.toggle('ext'))
 		}
   </script>
 </body>

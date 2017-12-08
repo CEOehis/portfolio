@@ -12,7 +12,7 @@ body {
 }
 
 button {
-	margin-top: 30%;
+	// margin-top: 30%;
 	background: #FF8B05;
 	padding: 10px 25px;
 	color: white;
@@ -20,6 +20,7 @@ button {
 .navbar {
 	padding: 5px;
 	font-family: 'Lato', sans-serif;
+	position: relative;
 }
 
 .navbar-header {
@@ -59,12 +60,13 @@ button {
 }
 
 .navbar-collapse {
-	border-top: 1px solid grey;
 	margin-left: -5px;
 	margin-right: -5px;
 	padding-left: 10px;
 	padding-right: 10px;
-	display: none;
+	// display: none;
+	height: 0px;
+	transition: height 200ms ease-in, border-top 200ms ease-in;
 	a {
 		display: block;
 		line-height: 20px;
@@ -74,9 +76,26 @@ button {
 		font-size: 14px;
 	}
 	&_expanded {
-		display: block;
+		height: 150px;
+		border-top: 1px solid grey;
 	}
 }
+
+.navbar-items {
+	position: absolute;
+	left: 0;
+	z-index: 100;
+	li {
+		overflow: hidden;
+		height: 0;
+		transition: height 300ms ease-in;
+		margin-left: 15px;
+	}
+	.ext {
+			height: 36px;
+		}
+}
+
 
 .main {
 	background: #0E94D3;
@@ -84,26 +103,34 @@ button {
 	height: 80%;
 	font-size: 1.5em;
 	line-height: 1.5em; 
-	padding-left: 15px;
-	padding-right: 15px;	
+	padding: 80px 15px 50px;
 
-	h1 {
-		padding-top: 30%;
-		padding-bottom: 10%;
+	h1, p {
 		font-weight: normal;
+		margin-bottom: 30px;
 	}
 }
 
+/* Desktops and laptops ----------- */
+@media only screen 
+and (max-width : 320px) {
+	.main {
+		font-size: 1.2em;
+		h1, p {
+			margin-bottom: 20px;
+		}
+	}
+}
 .tools {
-	margin: 35% 0;
+	// margin: 35% 0;
 	text-align: center;
 	h2 {
 		font-size: 1.5em;
 		margin-bottom: 30px;
 	}
 	p {
-		padding-left: 10%;
-		padding-right: 10%;
+		// padding-left: 10%;
+		// padding-right: 10%;
 		margin-bottom: 20px;
 	}
 	img {
