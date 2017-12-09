@@ -1,0 +1,10 @@
+/* Smaller screens ----------- */
+@media only screen 
+and (max-width : 320px) {
+	.main {
+		font-size: 1.2em;
+		h1, p {
+			margin-bottom: 20px;
+		}
+	}
+}

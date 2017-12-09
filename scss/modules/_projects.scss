@@ -1,0 +1,25 @@
+.projects {
+	background: $light-blue;
+	padding: 100px 0;
+	h2 {
+		font-size: 1.5em;
+		margin-bottom: 30px;
+		text-align: center;
+	}
+	p {
+		padding-left: 10%;
+		padding-right: 10%;
+		margin-bottom: 20px;
+	}
+	img {
+		text-align: center;
+		margin: 0 auto;
+		max-width:90%;
+		display: block;
+	}
+	button {
+		font-size: 1.5em;
+		display: block;
+		margin: 15px auto;
+	}
+}
