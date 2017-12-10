@@ -21,7 +21,7 @@ gulp.task('styles', function() {
 });
 
 gulp.task('watch', function () {
-  gulp.watch(['./index.html', 'css/*.css', 'js/*.js', 'scss/*.scss'], ['reload', 'styles']);
+  gulp.watch(['./index.html', 'css/*.css', 'js/*.js', 'scss/**/*.scss'], ['reload', 'styles']);
 });
 
 gulp.task('default', ['server', 'watch', 'styles']);

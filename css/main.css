@@ -6,7 +6,8 @@ html, body {
 
 body {
   font-family: "Catamaran", sans-serif;
-  font-size: 16px; }
+  font-size: 16px;
+  color: #8e8e8e; }
 
 button {
   background: #FF8B05;
@@ -38,7 +39,7 @@ button {
   .navbar-header__bar1, .navbar-header__bar2, .navbar-header__bar3 {
     width: 35px;
     height: 2px;
-    background-color: #333;
+    background-color: #8e8e8e;
     margin: 9px 0;
     transition: 0.4s; }
 
@@ -56,6 +57,8 @@ button {
     text-transform: uppercase;
     font-weight: bold;
     font-size: 14px; }
+    .navbar-collapse a:hover {
+      color: #FF8B05; }
   .navbar-collapse_expanded {
     height: 150px;
     border-top: 1px solid grey; }
@@ -63,7 +66,8 @@ button {
 .navbar-items {
   position: absolute;
   left: 0;
-  z-index: 100; }
+  z-index: 100;
+  width: 100%; }
   .navbar-items li {
     overflow: hidden;
     height: 0;
@@ -117,7 +121,6 @@ button {
     max-width: 90%;
     display: block; }
   .projects button {
-    font-size: 1.5em;
     display: block;
     margin: 15px auto; }
 
@@ -177,6 +180,91 @@ footer {
   text-align: center;
   background: #F2F2F2;
   color: #8e8e8e; }
+
+/* Here's where our carousel begins, with the main wrapper being
+relatively positioned, so that our absolutely positioned items are
+in the right place. */
+.carousel-wrapper {
+  position: relative;
+  /* Our absolutely positioned carousel items span the width and
+  height of its parent. We're making them transparent by default so
+  that they fade in when we cycle through them using the arrow links. */
+  /* Let's set our jump link targets display: none; so that we're not
+  making the browser jump to the top of the carousel whenever a user
+  clicks on one of our arrow links. This attribute selector will target
+  any element whose id starts with 'target-item'. */
+  /* So, up above we made all our carousel items transparent, which means
+  that on page-load, we'd have a big empty box where our carousel should be.
+  Let's set our first item's opacity to 1 so that it displays instead. Also,
+  we're setting its z-index to 2, so that it's positioned on top of the
+  other carousel items. */
+  /* But we don't want the first item to ALAWYS be opacity: 1; otherwise
+  it would peek through when cycling between items two and above. */
+  /* ...but if #target-item-1 is targeted, well we do want the first item
+  to show up, so we're selecting it with the ~ sibling selector and
+  setting its opacity to 1 again :-) */
+  /* If any other target-item-# is targeted, let's select it using the sibling
+  selector, make it fade in, and place it on top of the pile using z-index: 3.
+  Here's where you'd add more target items if your carousel has more than three
+  items. It might be worth adding like 10 items right off the bat. */ }
+  .carousel-wrapper .carousel-item {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 25px 0;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    /* Did you notice the 50px left, right padding up above? It's so
+    we can position our arrow links! Each one will be 50px wide. Also,
+    I'm using empty links with a background image so that the links
+    look like arrows. Make sure you swap out that URL with an actual
+    URL so that your arrow links aren't just transparent rectangles. */
+    /* I really like how these carousel items look on a dark image
+    background, so if a .carousel-item div has the class 'light',
+    we'll make its text color white, and use a white arrow instad of
+    a dark gray one. Again, make sure this arrow image exists somewhere */
+    /* Let's use using some media queries to resize the arrows
+    on smaller devices.*/ }
+    .carousel-wrapper .carousel-item .arrow {
+      position: absolute;
+      top: 0;
+      display: block;
+      width: 50px;
+      height: 100%;
+      -webkit-tap-highlight-color: transparent;
+      background: url("http://haloxp.com/codepen/carousel-arrow-dark.png") 50% 50%/20px no-repeat;
+      /* Let's put our arrow to go back on the left. */
+      /* And our arrow to go forward on the right. Since I'm using
+      the same arrow image for both my arrows, I'm rotating this one by
+      180 degrees so that it points in the right direction */ }
+      .carousel-wrapper .carousel-item .arrow.arrow-prev {
+        left: 0; }
+      .carousel-wrapper .carousel-item .arrow.arrow-next {
+        right: 0;
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg); }
+    .carousel-wrapper .carousel-item.light {
+      color: white; }
+      .carousel-wrapper .carousel-item.light .arrow {
+        background: url("http://haloxp.com/codepen/carousel-arrow-light.png") 50% 50%/20px no-repeat; }
+    @media (max-width: 480px) {
+      .carousel-wrapper .carousel-item .arrow, .carousel-wrapper .carousel-item.light .arrow {
+        background-size: 10px;
+        background-position: 10px 50%; } }
+  .carousel-wrapper [id^="target-item"] {
+    display: none; }
+  .carousel-wrapper .item-1 {
+    z-index: 2;
+    opacity: 1; }
+  .carousel-wrapper *:target ~ .item-1 {
+    opacity: 0; }
+  .carousel-wrapper #target-item-1:target ~ .item-1 {
+    opacity: 1; }
+  .carousel-wrapper #target-item-2:target ~ .item-2, .carousel-wrapper #target-item-3:target ~ .item-3 {
+    z-index: 3;
+    opacity: 1; }
 
 /* Smaller screens ----------- */
 @media only screen and (max-width: 320px) {

@@ -23,19 +23,19 @@
 	  </div>
 	  <div class="navbar-collapse">
 	    <ul class="navbar-items">
-	    	<li><a href="#">Home</a></li>
-	    	<li><a href="#">About</a></li>
-	    	<li><a href="#">Projects</a></li>
-	    	<li><a href="#">Contact</a></li>
+	    	<li><a href="#home">Home</a></li>
+	    	<li><a href="#about">About</a></li>
+	    	<li><a href="#projects">Projects</a></li>
+	    	<li><a href="#contact">Contact</a></li>
 	    </ul>
 	  </div>
   </nav>
-  <main class="main">
+  <main id="home" class="main">
   	<h1>Hi, I am Celestine</h1>
   	<p>I am a Designer and front end web developer living in Lagos, Nigeria.</p>
   	<button>CTA BUTTON</button>
   </main>
-  <section class="tools">
+  <section id="about" class="tools">
   	<h2>About</h2>
   	<p>I write code for the web. Always favouring semantically structured markup, well designed CSS and modular Javascript. These are the tools of my trade</p>
   	<div class="skills">
@@ -50,13 +50,47 @@
   		<img src="./assets/ps.png">
   	</div>
   </section>
-  <section class="projects">
+  <section id="projects" class="projects">
   	<h2>Projects</h2>
   	<p>Below are a handpicked collection of some projects I have been priviledged to work on.</p>
-  	<img src="./assets/project.jpg">
-  	<button>CASE STUDY</button>
+    <!--Here's our main wrapper.
+Since our carousel items get their size from their parent,
+we have to specify its height.-->
+<div class="carousel-wrapper" style="height: 200px;">
+  <!--The carousel uses regular links to cycle through each item.
+  The links actually target these display: none; spans so our page doesn't
+  jump like it normally would when using jump links.-->
+  <span id="target-item-1"></span>
+  <span id="target-item-2"></span>
+  <!--Here are our carousel items.
+  Each has a 'carousel-item' class, which we use for shared styling
+  and an item-# class, which we use to control its opacity
+  depending on which target-item-# is currently targeted-->
+  <div class="carousel-item item-1">
+    <!--We can add any content in here, just make sure that
+    your .carousel-wrapper is big enough to hold all the content.-->
+    <img src="./assets/project.jpg">
+    <button>CASE STUDY</button>
+    <!--Here are the links that control the carousel! Make sure
+    the href of each one is pointing to the right target-item-#
+    so that the carousel cycles in sequence.-->
+    <a class="arrow arrow-prev" href="#target-item-3"></a>
+    <a class="arrow arrow-next" href="#target-item-2"></a>
+  </div>
+  <div class="carousel-item item-2">
+    <!--We can add any content in here, just make sure that
+    your .carousel-wrapper is big enough to hold all the content.-->
+    <img src="./assets/project.jpg">
+    <button>CASE STUDY</button>
+    <!--Here are the links that control the carousel! Make sure
+    the href of each one is pointing to the right target-item-#
+    so that the carousel cycles in sequence.-->
+    <a class="arrow arrow-prev" href="#target-item-1"></a>
+    <a class="arrow arrow-next" href="#target-item-3"></a>
+  </div>
+</div>
   </section>
-  <section class="contact">
+  <section id="contact" class="contact">
   	<h2>Contact Me</h2>
   	<form>
   		<input type="text" name="name" placeholder="Name">
