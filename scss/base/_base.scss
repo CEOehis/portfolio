@@ -12,8 +12,17 @@ body {
 	color: $grey;
 }
 
-button {
+.button, button {
 	background: $orange;
 	padding: 10px 25px;
 	color: white;
+	text-align: center;
+	cursor: pointer;
+	&:hover {
+		background: lighten($orange, 10%);
+	}
+}
+
+textarea {
+	font-family: Arial;
 }
