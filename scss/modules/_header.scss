@@ -2,12 +2,14 @@
 	padding: 5px;
 	font-family: $navbar-font;
 	position: relative;
+	color: black;
+	font-weight: bold;
 }
 
 .navbar-header {
 	display: flex;
 	padding-bottom: 5px;
-
+	font-weight: normal;
 	&__logo {
 		img {
 			max-height: 40px;
@@ -52,7 +54,7 @@
 		line-height: 20px;
 		padding: 10px 0;
 		text-transform: uppercase;
-		font-weight: bold;
+		font-weight: bolder;
 		font-size: 14px;
 		&:hover {
 			color: $orange;

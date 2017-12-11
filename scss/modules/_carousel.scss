@@ -19,6 +19,7 @@ in the right place. */
     opacity: 0;
     transition: all 0.5s ease-in-out;
 
+
     /* Did you notice the 50px left, right padding up above? It's so
     we can position our arrow links! Each one will be 50px wide. Also,
     I'm using empty links with a background image so that the links
@@ -110,3 +111,8 @@ in the right place. */
     opacity: 1;
   }
 }
+
+    .carousel-item-content p {
+      display: none;
+      line-height: 20px;
+    }
