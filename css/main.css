@@ -193,6 +193,7 @@ relatively positioned, so that our absolutely positioned items are
 in the right place. */
 .carousel-wrapper {
   position: relative;
+  height: 300px;
   /* Our absolutely positioned carousel items span the width and
   height of its parent. We're making them transparent by default so
   that they fade in when we cycle through them using the arrow links. */
@@ -279,3 +280,55 @@ in the right place. */
     font-size: 1.2em; }
     .main h1, .main p {
       margin-bottom: 20px; } }
+
+@media only screen and (min-width: 600px) {
+  .main {
+    padding-left: 30px; }
+    .main p {
+      width: 50%; }
+  .tools p {
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto; }
+  .tools img {
+    max-height: 50px; }
+  .skills {
+    padding-left: 40px;
+    padding-right: 40px; }
+  .projects p {
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center; }
+  .projects img {
+    width: 49%;
+    margin: 0;
+    display: inline-block;
+    vertical-align: top; }
+  .projects .arrow.arrow-prev {
+    margin-left: 20px; }
+  .projects .arrow-next {
+    margin-right: 20px; }
+  .carousel-item-content {
+    width: 70%;
+    margin: 0 auto; }
+    .carousel-item-content p {
+      width: 50%;
+      display: inline-block;
+      vertical-align: top;
+      padding: 0 30px;
+      text-align: initial; }
+  .contact form {
+    width: 65%; }
+    .contact form * {
+      margin-bottom: 10px; }
+  .contact input {
+    display: initial;
+    width: 49.5%; }
+  .contact textarea {
+    height: 150px; }
+  .social ul {
+    width: 65%;
+    margin: 0 auto; } }

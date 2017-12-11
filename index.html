@@ -56,7 +56,7 @@
     <!--Here's our main wrapper.
 Since our carousel items get their size from their parent,
 we have to specify its height.-->
-<div class="carousel-wrapper" style="height: 200px;">
+<div class="carousel-wrapper">
   <!--The carousel uses regular links to cycle through each item.
   The links actually target these display: none; spans so our page doesn't
   jump like it normally would when using jump links.-->
@@ -69,8 +69,14 @@ we have to specify its height.-->
   <div class="carousel-item item-1">
     <!--We can add any content in here, just make sure that
     your .carousel-wrapper is big enough to hold all the content.-->
+    <div class="carousel-item-content">
     <img src="./assets/project.jpg">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat.</p>
     <button>CASE STUDY</button>
+  </div>
     <!--Here are the links that control the carousel! Make sure
     the href of each one is pointing to the right target-item-#
     so that the carousel cycles in sequence.-->
